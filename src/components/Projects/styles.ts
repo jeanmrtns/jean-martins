@@ -15,6 +15,8 @@ export const Content = styled.div`
   margin: 2.5rem auto;
   padding: 2rem 1.5rem;
 
+ 
+
   h1 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
@@ -25,6 +27,11 @@ export const Content = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+
+    @media(max-width:920px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
 
     li {
 
@@ -40,8 +47,16 @@ export const Content = styled.div`
       a {
         display: inline-block;
         text-decoration: none;
-        color: var(--blue);
+        color: var(--white);
+        border-radius: 0.25rem;
+        padding: 1rem 2rem;
         margin-top: 1rem;
+        background: var(--blue);
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
       }
     }
   }

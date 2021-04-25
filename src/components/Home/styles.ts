@@ -18,8 +18,11 @@ export const Content = styled.div`
   gap: 3rem;
   align-items: center;
   justify-items: center;
-
   animation: go-back 1s;
+
+  @media(max-width:920px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Profile = styled.div`
@@ -46,8 +49,8 @@ export const Profile = styled.div`
   }
 
   img {
-    margin: 1rem 0;
-    width: 20rem;
+    margin: 1rem;
+    width: 100%;
     border-radius: 50%;
   }
 

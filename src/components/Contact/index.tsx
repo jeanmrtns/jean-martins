@@ -1,45 +1,42 @@
-import { Container, Content } from "./styles";
+import { Container, Content, SocialMedia } from "./styles";
+import { FaGithub, FaLinkedin, FaRocket, FaTwitter } from 'react-icons/fa';
 
 export function Contact() {
   return (
     <Container>
       <Content>
-        <h1>Insira aqui seus dados e sua mensagem</h1>
-        <h6>Tempo de Resposta aproximado: 1 dia</h6>
-        <form action="/contato" method="POST">
-          <div>
-            <label htmlFor="email">Email</label>
-            <input
-              type="text"
-              name="emailaddress"
-              id="email"
-              placeholder="Insira aqui seu email"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="subject">Assunto</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              placeholder="Insira aqui o assunto da mensagem"
-              required
-            />
-          </div>
+        <SocialMedia>
+            <h1>Minhas Redes Sociais</h1>
+            <ul>
+              <li>
+                  <a href="https://www.linkedin.com/in/jean-martins-8648111b7/" target="_blank" rel="noreferrer">
+                    <FaLinkedin />
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.github.com/jeanmrtns" target="_blank" rel="noreferrer">
+                    <FaGithub />
+                    <span>GitHub</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com/jeanmrtns4" target="_blank" rel="noreferrer">
+                  <FaTwitter />
+                  <span>Twitter</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://app.rocketseat.com.br/me/jean-martins" target="_blank" rel="noreferrer">
+                  <FaRocket />
+                  <span>Rocketseat</span>
+                </a>
+              </li>
+            </ul>
 
-          <div>
-            <label htmlFor="message">Sua mensagem</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Insira aqui sua mensagem"
-              required
-            ></textarea>
-          </div>
+            <img src="https://github.com/jeanmrtns.png" alt="Jean Martins"/>
+          </SocialMedia>
 
-          <button type="submit">Enviar</button>
-        </form>
       </Content>
     </Container>
   )

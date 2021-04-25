@@ -14,6 +14,15 @@ export const Content = styled.div`
   justify-content: space-between;
   padding: 1rem 1.5rem;
 
+  @media(max-width:920px) {
+    flex-direction: column;
+    width: 100%;
+
+    nav {
+      margin-top: 1rem;
+    }
+  }
+
   nav {
     ul {
       list-style: none;
